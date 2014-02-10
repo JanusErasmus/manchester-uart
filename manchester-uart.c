@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/** Returns the 16 bit DC removed Manchester encoded data of byte
+*/
 uint16_t getManUART(uint8_t byte)
 {
     uint16_t man = 0;
@@ -16,6 +18,8 @@ uint16_t getManUART(uint8_t byte)
     return man;
 }
 
+/** Returns the 8 bit data from the Manchester encoded data of man
+*/
 uint8_t getUARTMan(uint16_t man)
 {
     uint8_t byte = 0;
